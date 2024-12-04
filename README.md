@@ -1,47 +1,93 @@
-Creating a tool like **Focus Lock** involves a straightforward process of scripting, functionality testing, and making the tool accessible as an executable file. Focus Lock is a Python-based utility designed to keep a selected window always on top of other applications. It operates dynamically, ensuring the pinned window stays visible regardless of switching between tasks. This concept is similar to DeskPins but implemented programmatically, making it a versatile and customizable option for developers and users. Below is a detailed explanation of the process and the steps to convert the script into an executable file.  
+# Focus Lock : Window Pinning Tool 
 
-### Process Overview  
-1. **Development and Dependencies:**  
-   The core script uses Python's `pywin32` module to interact with Windows' window management API. It identifies active windows, allows users to select one, and programmatically sets it as "always on top."  
-
-2. **Functionality Testing:**  
-   During testing, the script dynamically maintains the selected window’s focus and ensures smooth interaction even when other applications are in use.  
-
-3. **Executable Conversion:**  
-   To make the tool accessible without requiring Python installation, the script is converted into a standalone executable file using PyInstaller.  
+**Focus Lock** is a Python-based utility designed to keep a selected window always on top of other applications. This tool is similar to **DeskPins**, offering a programmatic solution for maintaining focus on a specific window, ensuring it remains visible and accessible even when switching between tasks.  
 
 ---
 
-### Steps to Create an Executable File  
-Follow these steps to package the Python script into an executable:  
+## Features  
+Focus Lock is a lightweight and efficient tool packed with the following features:  
+- **Dynamic Window Selection:** Detects all active windows and allows the user to select one to lock on top.  
+- **Always-on-Top Functionality:** Keeps the selected window on top of all other windows, ensuring it remains visible at all times.  
+- **User-Friendly Interface:** Simplifies window selection with a numbered list of active windows.  
+- **Customizable and Lightweight:** Developed using Python, Focus Lock is highly customizable for developers and doesn’t consume significant system resources.  
+- **DeskPins-Like Functionality:** Similar to DeskPins but implemented as a Python script, making it more adaptable and tailored to specific needs.  
 
+---
+
+## How It Works  
+1. **Window Detection:** The script identifies all active windows running on the system.  
+2. **User Selection:** The user selects the desired window from the list provided by the script.  
+3. **Always-on-Top Implementation:** The selected window is locked in the foreground using the `pywin32` library, ensuring it stays on top of other windows.  
+
+---
+
+## Step-by-Step Guide  
+
+### Prerequisites  
+- Python (version 3.7 or above) installed on your system.  
+- The `pywin32` library installed in your Python environment:  
+  ```bash  
+  pip install pywin32  
+  ```  
+
+---
+
+### Running the Script  
+1. Save the **Focus Lock** Python script (e.g., `focus_lock.py`) to a directory of your choice.  
+2. Open a terminal or command prompt, navigate to the script's directory, and run:  
+   ```bash  
+   python focus_lock.py  
+   ```  
+3. Follow the instructions to select the window you want to keep always on top.  
+
+---
+
+## Creating an Executable File  
+
+To make Focus Lock accessible without requiring Python installation, you can convert it into a standalone executable file using **PyInstaller**.  
+
+### Steps to Convert the Script to an Executable  
 1. **Install PyInstaller:**  
-   Ensure PyInstaller is installed in your Python environment:  
+   Run the following command in your terminal:  
    ```bash  
    pip install pyinstaller  
    ```  
 
-2. **Navigate to Your Script’s Directory:**  
-   Open a terminal or command prompt and move to the folder containing the Python script. For example:  
+2. **Navigate to the Script Directory:**  
+   Move to the folder containing the `focus_lock.py` script:  
    ```bash  
-   cd C:\Users\YourUsername\Desktop\FocusLock  
+   cd C:\path\to\your\script  
    ```  
 
-3. **Run PyInstaller Command:**  
-   Generate the executable by running:  
+3. **Generate the Executable:**  
+   Run the PyInstaller command:  
    ```bash  
    python -m PyInstaller --onefile focus_lock.py  
    ```  
-   This command creates a single executable file for distribution.  
+   - The `--onefile` option ensures all dependencies are bundled into a single executable file.  
 
 4. **Locate the Executable:**  
-   After the process completes, the executable can be found in the `dist` folder within your script's directory.  
+   After the build process completes, find the `.exe` file in the `dist` folder inside your script’s directory.  
 
 5. **Run the Executable:**  
-   Navigate to the `dist` folder and double-click the `.exe` file, or run it from the command prompt:  
+   Open the `dist` folder and double-click the `.exe` file, or run it via the terminal:  
    ```bash  
    cd dist  
    focus_lock.exe  
    ```  
 
-By following these steps, Focus Lock becomes a user-friendly, portable application that provides seamless functionality akin to DeskPins, empowering users to manage their workspace efficiently.
+---
+
+## Additional Notes  
+- **Error Handling:** The script dynamically checks the status of the selected window. If the window is closed, it gracefully exits without affecting your system.  
+- **System Requirements:** Focus Lock is compatible with Windows operating systems and requires administrative privileges for certain functionalities.
+
+---
+Any Enquiry..... 
+You can reach out in my E-Mail and Instagram
+gowthammsiddarthademan@gmail.com
+IG:@gowthamsiddarthademan
+---
+
+## Conclusion  
+**Focus Lock** provides a simple, effective, and customizable solution for maintaining focus on critical tasks. By following the steps outlined above, you can easily run the script or create a standalone executable for convenient use. This lightweight tool serves as a reliable alternative to DeskPins, empowering users to manage their workspace efficiently.  
