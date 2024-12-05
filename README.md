@@ -83,10 +83,10 @@ To make Focus Lock accessible without requiring Python installation, you can con
 - **System Requirements:** Focus Lock is compatible with Windows operating systems and requires administrative privileges for certain functionalities.
 
 ---
-Any Enquiry..... 
-You can reach out in my E-Mail and Instagram
-gowthammsiddarthademan@gmail.com
-IG:@gowthamsiddarthademan
+## Any Enquiry..... 
+- You can reach out in my E-Mail and Instagram
+- gowthammsiddarthademan@gmail.com
+- IG:@gowthamsiddarthademan
 ---
 
 ## Conclusion  
